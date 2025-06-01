@@ -1,25 +1,37 @@
-import React from 'react'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import App from './App'
-import Login from './pages/Login'
-import Register from './pages/Register'
+import React from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import App from "./App";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import JobOrders from "./pages/JobOrders";
+import Dashboard from "./pages/Dashboard";
 
 function Route() {
-    const routes = createBrowserRouter([
+  const routes = createBrowserRouter([
+    {
+      path: "/",
+      element: <App />,
+      children: [
         {
-            path: '/',
-            element: <App />
+          path: "",
+          element: <Dashboard />,
         },
         {
-            path: "/auth/register",
-            element: <Register />,
+          path: "job-orders",
+          element: <JobOrders />,
         },
-        {
-            path: "/auth/login",
-            element: <Login />,
-        },
-    ])
-    return <RouterProvider router={routes} />
+      ],
+    },
+    {
+      path: "/auth/register",
+      element: <Register />,
+    },
+    {
+      path: "/auth/login",
+      element: <Login />,
+    },
+  ]);
+  return <RouterProvider router={routes} />;
 }
 
-export default Route
+export default Route;
