@@ -5,7 +5,6 @@ import axiosInstance from '../api/axiosInstance.js'
 import BG from '../assets/bg.png'
 import Logo from '../components/Logo';
 import Input from '../components/Input';
-import Loader from '../components/Loader.jsx';
 
 function Login() {
     const [loading, setLoading] = useState(false)

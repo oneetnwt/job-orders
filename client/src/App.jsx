@@ -1,16 +1,19 @@
-
+import Sidebar from "./components/Sidebar";
+import { Outlet } from "react-router-dom";
 
 function App() {
   return (
-    <div className="w-full h-screen flex">
-      <div>
-        dsda
+    <main className="transition-all flex md:grid md:grid-cols-[minmax(13rem,15rem)_1fr] h-dvh">
+      <div className="hidden sm:flex">
+        <Sidebar />
       </div>
-      <div>
-        Hello
+      <div className="overflow-hidden w-ful">
+        <div>
+          <Outlet />
+        </div>
       </div>
-    </div>
-  )
+    </main>
+  );
 }
 
-export default App
+export default App;
