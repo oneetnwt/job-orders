@@ -63,7 +63,7 @@ function Register() {
     return (
         <div className="w-full h-screen min-h-screen">
             <div
-                className="grid md:grid-cols-2 gap-10 grid-cols-1 items-center justify-center min-h-screen p-4 md:p-12 lg:p-20 bg-cover"
+                className="grid md:grid-cols-2 md:gap-10 grid-cols-1 items-center justify-center min-h-screen p-4 md:p-12 lg:p-20 bg-cover"
                 style={{
                     backgroundImage: `url(${BG})`,
                     backgroundSize: "cover",
